@@ -92,14 +92,8 @@ public class CarControllerTest {
      */
     @Test
     public void listCars() throws Exception {
-        /**
-         * TODO: Add a test to check that the `get` method works by calling
-         *   the whole list of vehicles. This should utilize the car from `getCar()`
-         *   below (the vehicle will be the first in the list).
-         */
         mvc.perform(get(new URI("/cars"))).andExpect(status().isOk());
         verify(carService,times(1)).list();
-
     }
 
     /**
@@ -108,10 +102,6 @@ public class CarControllerTest {
      */
     @Test
     public void findCar() throws Exception {
-        /**
-         * TODO: Add a test to check that the `get` method works by calling
-         *   a vehicle by ID. This should utilize the car from `getCar()` below.
-         */
         Long id = 1L;
         mvc.perform(get(new URI("/cars/"+id))).andExpect(status().isOk());
         verify(carService,times(1)).findById(id);
@@ -137,11 +127,6 @@ public class CarControllerTest {
      */
     @Test
     public void deleteCar() throws Exception {
-        /**
-         * TODO: Add a test to check whether a vehicle is appropriately deleted
-         *   when the `delete` method is called from the Car Controller. This
-         *   should utilize the car from `getCar()` below.
-         */
         Long id = 1L;
         mvc.perform(delete(new URI("/cars/"+id))).andExpect(status().isNoContent());
         verify(carService,times(1)).delete(id);
