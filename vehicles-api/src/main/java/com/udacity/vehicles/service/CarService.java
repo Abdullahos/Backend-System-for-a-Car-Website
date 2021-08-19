@@ -67,7 +67,7 @@ public class CarService {
          *   the pricing service each time to get the price.
          */
         String price = priceClient.getPrice(id);
-
+        car.setPrice(price);
         /**
          * TODO: Use the Maps Web client you create in `VehiclesApiApplication`
          *   to get the address for the vehicle. You should access the location
