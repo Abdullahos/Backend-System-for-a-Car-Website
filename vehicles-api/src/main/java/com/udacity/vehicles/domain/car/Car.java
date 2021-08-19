@@ -45,7 +45,9 @@ public class Car {
     @Valid
     @Embedded
     private Location location = new Location(0d, 0d);
-
+    /**
+    @Transient annotation is used to indicate that a field is not to be persisted in the database
+    */
     @Transient
     private String price;
 

@@ -65,6 +65,7 @@ public class CarService {
          * TODO: Set the price of the car
          * Note: The car class file uses @transient, meaning you will need to call
          *   the pricing service each time to get the price.
+         *   @Transient annotation is used to indicate that a field is not to be persisted in the database, so we need to call it each time.
          */
         String price = priceClient.getPrice(id);
         car.setPrice(price);
@@ -87,7 +88,7 @@ public class CarService {
      * Either creates or updates a vehicle, based on prior existence of car
      * @param car A car object, which can be either new or existing
      * @return the new/updated car is stored in the repository
-     * note: price can't be overrided or assigned as it's annotated with transient.
+     * note: price can't be overrided or assigned as it's annotated with transient.(not present in the database!)
      */
     public Car save(Car car) {
         if (car.getId() != null) {
