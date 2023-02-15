@@ -8,4 +8,4 @@
 
 ## Dependencies
 
-The project requires the use of Maven and Spring Boot, along with Java v11.Cancel changes
+The project requires the use of Maven and Spring Boot, along with Java v11.
